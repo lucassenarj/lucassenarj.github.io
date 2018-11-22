@@ -1,11 +1,11 @@
 # Build settings
-permalink: /posts/:year/:title/
+permalink: /blog/:year/:title/
 markdown: kramdown
 highlighter: pygments.rb
 plugins: [jekyll-paginate, jekyll-sitemap]
 
 paginate: 5
-paginate_path: "/posts/page/:num/"
+paginate_path: "/blog/page/:num/"
 comments: true
 
 source: source
@@ -41,7 +41,7 @@ author:
 navbar:
   - slug: about
     title: About
-  - slug: posts
-    title: Posts
+  - slug: blog
+    title: Blog
 
 exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.md", "Rakefile"]
