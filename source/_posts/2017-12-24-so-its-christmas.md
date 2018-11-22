@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "So... It's Christmas!"
-permalink: so-its-christmas
 date: 2017-12-24 09:58:20
 comments: true
 description: "So... It's Christmas!"
 image: https://lucassenarj.github.io/blog/images/post/merry-christmas.jpeg
 keywords: "Christmas, Santa Claus, Merry Christmas, Brazil"
 categories: off-topic
-
-tags: christmas, off-topic
 
 ---
 

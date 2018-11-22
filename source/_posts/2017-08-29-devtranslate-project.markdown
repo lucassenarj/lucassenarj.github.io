@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "Dev#Translate Project"
-permalink: devtranslate-project
-date: 2017-08-29 21:39:06
-comments: true
 description: "Dev#Translate Project"
-image: https://camo.githubusercontent.com/c2d6ad6441779fa25c26b1551afc45e547bcbafe/687474703a2f2f6936382e74696e797069632e636f6d2f6964737576372e706e67
+date:   2017-08-29 21:39:06
 keywords: "Dev, Translate, Projects, English, Portuguese"
+comments: true
+image: https://camo.githubusercontent.com/c2d6ad6441779fa25c26b1551afc45e547bcbafe/687474703a2f2f6936382e74696e797069632e636f6d2f6964737576372e706e67
 categories: projects
-
-tags:
 
 ---
 
