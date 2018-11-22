@@ -1,0 +1,47 @@
+# Build settings
+permalink: /posts/:year/:title/
+markdown: kramdown
+highlighter: pygments.rb
+plugins: [jekyll-paginate, jekyll-sitemap]
+
+paginate: 5
+paginate_path: "/posts/page/:num/"
+comments: true
+
+source: source
+destination: _site
+sass:
+  sass_dir: _sass
+  style: compressed # expanded
+
+# SEO settings
+title: Lucas Sena
+description: "My personal blog about something I like."
+keywords: "Blog, Front-end Developer, Angular, React, Javascript, Jekyll"
+url: https://lucassenarj.github.io
+baseurl: "/site"
+
+google_analytics: UA-105630227-1
+repo: http://github.com/lucassenarj/site
+disqus_shortname: "lucassenarj"
+disqus_site_shortname: "lucassenarj"
+
+# Author settings
+author:
+  name: Lucas Sena
+  job: Frontend Developer
+  bio: "I have been working as Full-Stack Developer for more than 8 years, but since a few months ago I decided to dedicate all my studies for Front-end techonologies, as frameworks like ReactJs and AngularJs, also diving in the mobile world with hybrid Javascript technologies like React-Native and Ionic."
+  thumb: /images/author.jpg
+  email: lucassena.rj@gmail.com
+  url: https://lucassenarj.me/
+  github: https://github.com/lucassenarj
+  linkedin: https://linkedin.com/in/lucassenarj
+
+# navbar pages
+navbar:
+  - slug: about
+    title: About
+  - slug: posts
+    title: Posts
+
+exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.md", "Rakefile"]

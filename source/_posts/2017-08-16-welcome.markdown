@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Welcome to my blog!"
+description: "Hi, my name is Lucas Sena and welcome to my personal and blog."
+date:   2017-08-16 17:46:52
+keywords: "Welcome, Lucas Sena, Blog"
+comments: false
+image: https://jekyllrb.com/img/octojekyll.png
+categories: welcome
+---
+
+Hi, my name is Lucas Sena and welcome to my personal and blog.
+
+The propose of this blog is I write somethings about my projects, things that I am learning and will be a way to I practice my english. Will be the first time that I create a blog and will be the first time too that Im writing in english. My english is not too good, so it will have a few grammatical errors and other errors that a person wich is learning english commits.
+
+I am using Jekyll to generate this blog, so I'll be learning about this framework too.
+
+I don't have any welcome text in mind to write here, so this first post it be only for introduce my blog to world and also who I am.
