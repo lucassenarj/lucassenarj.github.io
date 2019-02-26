@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Dev#Translate Project"
+permalink: devtranslate-project
 description: "Dev#Translate Project"
 date:   2017-08-29 21:39:06
 keywords: "Dev, Translate, Projects, English, Portuguese"

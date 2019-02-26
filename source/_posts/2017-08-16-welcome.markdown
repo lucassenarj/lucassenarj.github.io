@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Welcome to my blog!"
+permalink: welcome
 description: "Hi, my name is Lucas Sena and welcome to my personal and blog."
 date:   2017-08-16 17:46:52
 keywords: "Welcome, Lucas Sena, Blog"
