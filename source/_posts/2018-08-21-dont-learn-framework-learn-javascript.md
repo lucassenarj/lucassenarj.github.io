@@ -5,7 +5,7 @@ permalink: dont-learn-framework-learn-javascript
 date: 2018-08-21 22:35:29
 comments: true
 description: "Don't learn framework, learn Javascript"
-image: https://lucassenarj.github.io/site/images/post/2018-11-12-dont-learn-framework-learn-javascript.png
+image: https://lucassenarj.github.io/images/post/2018-11-12-dont-learn-framework-learn-javascript.png
 keywords: "Javascript, ReactJs, Angular, Frameworks, jQuery, Ionic, React-Native, Fecth API, Ajax"
 categories: topics
 

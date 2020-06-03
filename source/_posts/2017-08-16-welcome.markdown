@@ -6,7 +6,7 @@ description: "Hi, my name is Lucas Sena and welcome to my personal and blog."
 date:   2017-08-16 17:46:52
 keywords: "Welcome, Lucas Sena, Blog"
 comments: false
-image: https://jekyllrb.com/img/octojekyll.png
+image: https://lucassenarj.github.io/images/post/2017-08-16-welcome.png
 categories: welcome
 ---
 

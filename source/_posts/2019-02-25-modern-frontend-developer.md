@@ -5,7 +5,7 @@ permalink: modern-frontend-developer
 date: 2019-02-25 22:02:51
 comments: true
 description: "Modern Frontend Developer"
-image: https://lucassenarj.github.io/site/images/post/2019-02-25-modern-frontend-developer.jpg
+image: https://lucassenarj.github.io/images/post/2019-02-25-modern-frontend-developer.jpg
 keywords: "Javascript, ReactJs, Angular, Frameworks, Webpack, Gulp, Grunt, SASS, LASS, TDD, SPA, PWA"
 categories: topics
 

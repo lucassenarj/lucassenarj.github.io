@@ -19,7 +19,7 @@ title: Lucas Sena
 description: "My personal blog about something I like."
 keywords: "Blog, Front-end Developer, Angular, React, Javascript, Jekyll"
 url: https://lucassenarj.github.io
-baseurl: "/site"
+baseurl: ""
 
 google_analytics: UA-105630227-1
 repo: http://github.com/lucassenarj/lucassenarj.github.io
