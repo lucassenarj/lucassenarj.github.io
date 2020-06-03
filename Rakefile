@@ -6,7 +6,7 @@ require "jekyll"
 require "bourbon"
 
 # Change your GitHub reponame
-GITHUB_REPONAME = "lucassenarj/site"
+GITHUB_REPONAME = "lucassenarj/lucassenarj.github.io"
 GITHUB_REPO_BRANCH = "gh-pages"
 
 SOURCE = "source/"
