@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lucas Sena</title>
+    <description>My personal blog about something I like.</description>
+    <link>https://lucassenarj.github.io/</link>
+    <atom:link href="https://lucassenarj.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 22 Oct 2020 19:05:27 +0100</pubDate>
+    <lastBuildDate>Thu, 22 Oct 2020 19:05:27 +0100</lastBuildDate>
+    <generator>Jekyll v3.6.3</generator>
+    
+      <item>
+        <title>Modern Frontend Developer</title>
+        <description>&lt;p&gt;Hello guys! Here I am again after a troubled year where I barely wrote for the blog. This year, I promise that it will be different. One of my new years’ resolutions, it is to write regularly on my blog. I had a lot of ideas, but I couldn’t organize myself to take time in the week to write, so this year, I will try to do that.&lt;/p&gt;
+
+&lt;p&gt;A funny fact is that this post it’s not about any of those ideas, but for a recent situation which I had in my job. This week I was talking about Design Patterns with a friend who works as a backend developer. He talked about how he would implement this pattern in our project if he had that opportunity. We also talked about the &lt;strong&gt;Hexagonal Architecture Pattern&lt;/strong&gt; and how this would be good for our project, thinking about to isolate the necessity to use a specific framework and other technical stuff. After this long conversation, I reminded about another talk I had with another developer in the office in which I was explaining about &lt;strong&gt;PWA&lt;/strong&gt; and how this would increase the UX of our platform applying a few technics in our front-end encouraging our user to use more our web version instead of our app.&lt;/p&gt;
+
+&lt;p&gt;Thinking about these conversations I realized how much things have changed over the years. When I started my career, at the beginning of 2012, if you had a medium knowledge about HTML/CSS, know how to use jQuery and be good with PHP, by example, was enough for you to get a good job. With advanced of the web and the boom of frameworks, the complexity of projects increased and the quality too. Have Fullstack Developers working on big projects, was replaced for having specialist either in the backend as the frontend, because of the necessity of those stacks increased.&lt;/p&gt;
+
+&lt;p&gt;Analyzing the requirements for some jobs, currently, to have a solid knowledge of HTML5, CSS3 and Javascript is only the basic. A professional has to handle a lot of technologies, like create a &lt;strong&gt;SPA&lt;/strong&gt; (&lt;em&gt;Single Page Application&lt;/em&gt;), know how to implement &lt;strong&gt;PWA&lt;/strong&gt; (&lt;em&gt;Progressive Web App&lt;/em&gt;) in an application. Have experience with some CSS preprocessor like &lt;strong&gt;SASS&lt;/strong&gt; or &lt;strong&gt;LESS&lt;/strong&gt; also with some task runner like &lt;strong&gt;Gulp&lt;/strong&gt; or &lt;strong&gt;Grunt&lt;/strong&gt; to automating your tasks. It’s required to know how to set up &lt;strong&gt;Webpack&lt;/strong&gt; for module your application and optimize your development. Another thing is to have knowledge about how to create and test an application and know how to work using &lt;strong&gt;TDD&lt;/strong&gt; (&lt;em&gt;Test Driven Development&lt;/em&gt;). Also, know about the three most used frameworks currently (&lt;em&gt;React, Angular and Vue&lt;/em&gt;) and have solid knowledge in at least one of them. And things like UI/UX and a lot of others that I could spend the rest of the day writing here.&lt;/p&gt;
+
+&lt;p&gt;Work with Front-end at a high level it’s currently most difficult than in the past but also much more valued. The companies are giving more priority for front-end and the user experience of their application, which means: more opportunities, higher salaries, and recognition for us.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 25 Feb 2019 22:02:51 +0000</pubDate>
+        <link>https://lucassenarj.github.io/blog/2019/modern-frontend-developer/</link>
+        <guid isPermaLink="true">https://lucassenarj.github.io/blog/2019/modern-frontend-developer/</guid>
+        
+        <category>off-topic</category>
+        
+        
+        <category>topics</category>
+        
+      </item>
+    
+      <item>
+        <title>Don't learn framework, learn Javascript</title>
+        <description>&lt;p&gt;Recently in my current job, I am dealing a lot with front-end, special &lt;strong&gt;Angular&lt;/strong&gt; and &lt;strong&gt;Ionic framework&lt;/strong&gt;. We are developing some new features using these technologies. In my parallel projects, I am using &lt;strong&gt;React&lt;/strong&gt; and &lt;strong&gt;React-Native&lt;/strong&gt; for web and mobile respectively.&lt;/p&gt;
+
+&lt;p&gt;All those frameworks had in common that they consume a lot of small libraries and modules that help you to write your code and sometimes make they simple and practical. Like in Angular by example, when you need to do an &lt;strong&gt;HTTP Request&lt;/strong&gt;, you had a whole module to explore which give you an asynchronous return that you can easily handle. With &lt;strong&gt;React/React-Native&lt;/strong&gt;, you can use an external library like axios or you can implement a new javascript feature called &lt;strong&gt;Fetch API&lt;/strong&gt;. In all those cases, you can easily handle with the return of the request.&lt;/p&gt;
+
+&lt;h2 id=&quot;but-what-is-the-importance-to-learn-native-codes-instead-frameworks-since-i-just-said-that-with-frameworks-its-more-practical&quot;&gt;But what is the importance to learn native codes, instead frameworks, since I just said that with frameworks it’s more practical?&lt;/h2&gt;
+
+&lt;p&gt;This is something that I always hear talk about. But I never realized the importance to learn the native language of the framework. Now, I have a simple answer to this question: Legacy codes.&lt;/p&gt;
+
+&lt;p&gt;At some point in your life, you probably will have to give support to some project that doesn’t use this technology. So you will deal with some jquery code, some ajax requests and others old-fashioned techniques. Ok, jQuery and Ajax are not that old like XMLHttpRequest and some other dinosaurs features, but in the world of frameworks, yes, they are old rs.&lt;/p&gt;
+
+&lt;p&gt;This was my case a few days ago. I was refactoring an old feature and faced it with the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$.ajax({
+    url: path,
+    dataType: &quot;json&quot;,
+    type: 'GET',
+    success: function(response) {
+        div = '';
+        if(response.div){
+            if(response.div.add){
+                div += '&amp;lt;div class=&quot;col-md-12&quot;&amp;gt;Content added by: '+ response.div.user +'&amp;lt;/div&amp;gt;';
+            }
+
+            if(response.div.remove){
+                div += '&amp;lt;div class=&quot;col-md-12&quot;&amp;gt;Content removed by '+ response.div.user +'&amp;lt;/div&amp;gt;';
+            }
+        }
+
+        if(!div){
+            div += '&amp;lt;div class=&quot;col-md-12&quot;&amp;gt;Theres no content to show&amp;lt;/div&amp;gt;';
+        }
+
+        $('#divContent').html(div);
+        $('#modal-div').modal();    
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;My first thought was: &lt;strong&gt;WHAT THE HELL!&lt;/strong&gt; After a few seconds, I started to figure out what I was dealing with. An Ajax request. It’s been a while since I saw an ajax request.&lt;/p&gt;
+
+&lt;p&gt;Nowadays we don’t use more HTTP request like this. In javascript, using the new feature called Fetch API, we can use like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fetch(url)
+.then(response =&amp;gt; response.json())
+.then(json =&amp;gt; {
+    alert(json);
+}).catch(error =&amp;gt; {
+    alert(error);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;in-react-using-axios-library-we-can-use-like&quot;&gt;In React, using Axios library, we can use like:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;axios.get(url)
+.then(function (response) {
+    alert(response)
+})
+.catch(function (error) {
+    alert(error)
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;using-angular-http-module&quot;&gt;Using Angular HTTP Module:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;http.get(url) 
+.subscribe(response=&amp;gt;{
+    alert(response);
+}, (error)=&amp;gt;{
+    alert(error);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It’s way simpler to do an HTTP request nowadays than was a few years ago, it’s also much more intuitive. But, as you may note, it’s also very similar. All of those calls had one method, one callback for success and another one for error. So in the end, had the same logic. This is the reason why is important for you to know the native language to the framework because you won’t be tied to one way to write, you will be able to write the same call in several different ways.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 21 Aug 2018 23:35:29 +0100</pubDate>
+        <link>https://lucassenarj.github.io/blog/2018/dont-learn-framework-learn-javascript/</link>
+        <guid isPermaLink="true">https://lucassenarj.github.io/blog/2018/dont-learn-framework-learn-javascript/</guid>
+        
+        
+        <category>topics</category>
+        
+      </item>
+    
+      <item>
+        <title>So... It's Christmas!</title>
+        <description>&lt;p&gt;Hello everyone, today I will talk about a thing that is not connected into the technology world or nothing like that, today I’ll talk about Christmas.&lt;/p&gt;
+
+&lt;p&gt;Here in Brazil, we consume a lot of American movies and TV shows, and since we’re children, we have this idea of Christmas that doesn’t correspond to our reality. In the movies and the TV shows, Christmas is in the winter, have snow and the people normally celebrate in day 25. Families reunited, turkey and all the things that we already saw in the movies. Here in Brazil, it’s quite different, first because the whether, it’s summer here, so there isn’t snow or cold, but only temperatures over 30°c and sometimes rain, because it’s so warm in the day, that in the night rains a lot. Here, we have a tradition to celebrate in the previously night, in December 24th. All the families reunites and when it’s 11:59pm off December 24th, we hope anxiously for the next minute to wish Marry Christmas to everyone. Normally, it’s after this that we start to exchange gifts.&lt;/p&gt;
+
+&lt;p&gt;But here in Brazil we also celebrate the Christmas giving a party. Some people likes to have a barbecue, with a many beers and music for been celebrating until dawn. It’s normal here we buy new clothes and use for the fist time in the Christmas night. It’s like a tradition, we buy nice clothes, and use for dinner. There’s also people that celebrate in the church. Brazil is one of the biggest Catholic country in the world, and there’s so many people which are going on the previously day for Church, and celebrate the passage to Christmas day with other believers. My grandmother is one of these people. About after 2am, she comes back to home to celebrate with our family.&lt;/p&gt;
+
+&lt;p&gt;I know that the Christmas it’s supposed to be a happy time, but in the reality, for many people who suffer from diseases like depression, anxiety and others, it’s not a happy time. It’s already comproved that the number of people who commit suicide it’s larger in the Christmas than in the rest of the year. So the idea of this post, it’s to show the world the different ways to celebrate the Christmas here in Brazil, but I know that there are so many others ways to celebrate around the world and even around Brazil, so doesn’t matter the way that you choose pass the Christmas, pass in the way that make you feel happy, even if you pass alone, I already passed alone in my bedroom watching NCAA Football and it was awesome lol.&lt;/p&gt;
+
+&lt;p&gt;So I would like to wish to everyone who spent your time reading this publication a Merry Christmas and thanks for let me share a few of my thoughts with you.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 Dec 2017 09:58:20 +0000</pubDate>
+        <link>https://lucassenarj.github.io/blog/2017/so-its-christmas/</link>
+        <guid isPermaLink="true">https://lucassenarj.github.io/blog/2017/so-its-christmas/</guid>
+        
+        <category>off-topic</category>
+        
+        
+        <category>topics</category>
+        
+      </item>
+    
+      <item>
+        <title>Dev#Translate Project</title>
+        <description>&lt;p&gt;Hi everyone, I will debut my blog talking about a very cool project that I am participating, the Dev#Translate.&lt;/p&gt;
+
+&lt;p&gt;The Dev#Translate is a project of translate which has the main goal translate contents related about IT for others languages. The project started with the idea to translate documentations and articles from english to portuguese, to include a part of the brazilian community who dosen’t speack english. But the project has plans to expand, to translate the contents to several languages, and even translate contents in portuguese.&lt;/p&gt;
+
+&lt;p&gt;I decided participate translating a few contents from english to portugues, and vice-versa, because its a way to I pay back the community for all free content that I consumed along the years, and pratice my english too.&lt;/p&gt;
+
+&lt;p&gt;For more informations, just click on the link below to access the page of the project.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/devtranslate/&quot;&gt;Dev#Translate Github&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://devtranslate.github.io/&quot;&gt;Dev#Translate Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 29 Aug 2017 22:39:06 +0100</pubDate>
+        <link>https://lucassenarj.github.io/blog/2017/devtranslate-project/</link>
+        <guid isPermaLink="true">https://lucassenarj.github.io/blog/2017/devtranslate-project/</guid>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to my blog!</title>
+        <description>&lt;p&gt;Hi, my name is Lucas Sena and welcome to my personal and blog.&lt;/p&gt;
+
+&lt;p&gt;The propose of this blog is I write somethings about my projects, things that I am learning and will be a way to I practice my english. Will be the first time that I create a blog and will be the first time too that Im writing in english. My english is not too good, so it will have a few grammatical errors and other errors that a person wich is learning english commits.&lt;/p&gt;
+
+&lt;p&gt;I am using Jekyll to generate this blog, so I’ll be learning about this framework too.&lt;/p&gt;
+
+&lt;p&gt;I don’t have any welcome text in mind to write here, so this first post it be only for introduce my blog to world and also who I am.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 16 Aug 2017 18:46:52 +0100</pubDate>
+        <link>https://lucassenarj.github.io/blog/2017/welcome/</link>
+        <guid isPermaLink="true">https://lucassenarj.github.io/blog/2017/welcome/</guid>
+        
+        <category>welcome</category>
+        
+        
+        <category>welcome</category>
+        
+      </item>
+    
+  </channel>
+</rss>

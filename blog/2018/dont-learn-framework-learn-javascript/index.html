@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Don't learn framework, learn Javascript</title>
+<meta name="description" content="Recently in my current job, I am dealing a lot with front-end, special Angular and Ionic framework. We are developing some new features using these technolog...">
+
+<link rel="shortcut icon" href="https://lucassenarj.github.io/favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" href="/css/main.css">
+<link rel="canonical" href="https://lucassenarj.github.io/blog/2018/dont-learn-framework-learn-javascript/">
+<link rel="manifest" href="/manifest.json">
+<link rel="alternate" type="application/rss+xml" title="Lucas Sena" href="https://lucassenarj.github.io/feed.xml" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105630227-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body>
+  <header class="site-header">
+  <div class="container">
+    <input type="checkbox" id="toggleNavbar">
+    <h1 class="logo"><a href="/"><span>Lucas Sena</span></a></h1>
+    <label for="toggleNavbar" role="button" class="toggle-navbar-button">
+      <i class="icon icon-menu"></i>
+      <i class="icon icon-cross"></i>
+    </label>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/" title="Home">Home</a></li>
+        
+          <li><a href="/about" title="About">About</a></li>
+        
+          <li><a href="/blog" title="Blog">Blog</a></li>
+        
+        <li><a href="/feed.xml" target="_blank"><i class="icon icon-rss"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main class="main-container">
+  <div class="container">
+    <article role="article" class="post">
+
+  <div class="card">
+    <header class="post-header">
+      <h1 class="post-title">Don't learn framework, learn Javascript</h1>
+      <em class="post-meta">
+        <time>Aug 21, 2018</time>
+      </em>
+    </header>
+
+    <div class="post-content">
+      
+        <figure class="post-thumbnail ">
+          <img src="https://lucassenarj.github.io/images/post/2018-11-12-dont-learn-framework-learn-javascript.png" alt="Don't learn framework, learn Javascript">
+        </figure>
+      
+      <p>Recently in my current job, I am dealing a lot with front-end, special <strong>Angular</strong> and <strong>Ionic framework</strong>. We are developing some new features using these technologies. In my parallel projects, I am using <strong>React</strong> and <strong>React-Native</strong> for web and mobile respectively.</p>
+
+<p>All those frameworks had in common that they consume a lot of small libraries and modules that help you to write your code and sometimes make they simple and practical. Like in Angular by example, when you need to do an <strong>HTTP Request</strong>, you had a whole module to explore which give you an asynchronous return that you can easily handle. With <strong>React/React-Native</strong>, you can use an external library like axios or you can implement a new javascript feature called <strong>Fetch API</strong>. In all those cases, you can easily handle with the return of the request.</p>
+
+<h2 id="but-what-is-the-importance-to-learn-native-codes-instead-frameworks-since-i-just-said-that-with-frameworks-its-more-practical">But what is the importance to learn native codes, instead frameworks, since I just said that with frameworks it’s more practical?</h2>
+
+<p>This is something that I always hear talk about. But I never realized the importance to learn the native language of the framework. Now, I have a simple answer to this question: Legacy codes.</p>
+
+<p>At some point in your life, you probably will have to give support to some project that doesn’t use this technology. So you will deal with some jquery code, some ajax requests and others old-fashioned techniques. Ok, jQuery and Ajax are not that old like XMLHttpRequest and some other dinosaurs features, but in the world of frameworks, yes, they are old rs.</p>
+
+<p>This was my case a few days ago. I was refactoring an old feature and faced it with the following code:</p>
+
+<pre><code>$.ajax({
+    url: path,
+    dataType: "json",
+    type: 'GET',
+    success: function(response) {
+        div = '';
+        if(response.div){
+            if(response.div.add){
+                div += '&lt;div class="col-md-12"&gt;Content added by: '+ response.div.user +'&lt;/div&gt;';
+            }
+
+            if(response.div.remove){
+                div += '&lt;div class="col-md-12"&gt;Content removed by '+ response.div.user +'&lt;/div&gt;';
+            }
+        }
+
+        if(!div){
+            div += '&lt;div class="col-md-12"&gt;Theres no content to show&lt;/div&gt;';
+        }
+
+        $('#divContent').html(div);
+        $('#modal-div').modal();    
+    }
+});
+</code></pre>
+
+<p>My first thought was: <strong>WHAT THE HELL!</strong> After a few seconds, I started to figure out what I was dealing with. An Ajax request. It’s been a while since I saw an ajax request.</p>
+
+<p>Nowadays we don’t use more HTTP request like this. In javascript, using the new feature called Fetch API, we can use like:</p>
+
+<pre><code>fetch(url)
+.then(response =&gt; response.json())
+.then(json =&gt; {
+    alert(json);
+}).catch(error =&gt; {
+    alert(error);
+});
+</code></pre>
+
+<h3 id="in-react-using-axios-library-we-can-use-like">In React, using Axios library, we can use like:</h3>
+<pre><code>axios.get(url)
+.then(function (response) {
+    alert(response)
+})
+.catch(function (error) {
+    alert(error)
+});
+</code></pre>
+
+<h3 id="using-angular-http-module">Using Angular HTTP Module:</h3>
+<pre><code>http.get(url) 
+.subscribe(response=&gt;{
+    alert(response);
+}, (error)=&gt;{
+    alert(error);
+});
+</code></pre>
+
+<p>It’s way simpler to do an HTTP request nowadays than was a few years ago, it’s also much more intuitive. But, as you may note, it’s also very similar. All of those calls had one method, one callback for success and another one for error. So in the end, had the same logic. This is the reason why is important for you to know the native language to the framework because you won’t be tied to one way to write, you will be able to write the same call in several different ways.</p>
+
+    </div>
+
+    
+<hr>
+
+<aside id="comments" class="disqus">
+  <h3><i class="icon icon-comments-o"></i> Comments</h3>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'https://lucassenarj.github.io/blog/2018/dont-learn-framework-learn-javascript/';
+      this.page.identifier = '/blog/2018/dont-learn-framework-learn-javascript';
+    };
+    (function() {
+      var d = document,
+      s = d.createElement('script');
+      s.src = '//lucassenarj.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</aside>
+
+
+  </div>
+
+</article>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="social">
+  <li><a href="https://github.com/lucassenarj" target="_blank"><i class="icon icon-github"></i></a></li>
+  <li><a href="/" target="_blank"><i class="icon icon-twitter"></i></a></li>
+  <li><a href="/" target="_blank"><i class="icon icon-facebook"></i></a></li>
+  <li><a href="https://linkedin.com/in/lucassenarj" target="_blank"><i class="icon icon-linkedin"></i></a></li>
+</ul>
+    <p class="txt-medium-gray">
+      <small>&copy;2020 All rights reserved. Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and ♥</small>
+    </p>
+  </div>
+</footer>
+
+
+  <a href="http://github.com/lucassenarj/lucassenarj.github.io" target="_blank" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#337ab7; color:#fff; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+</body>
+</html>
